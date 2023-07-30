@@ -29,6 +29,19 @@ body{
     height: 90vh;
 }
 
+.opaco{
+    background-image: url(../IMG/fondo_inicio.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 30%;
+    background-attachment: fixed;
+    /* background-position-x: -120px; */
+    height: 90vh;
+    /*esto saca la imagen por el orden nomas*/
+    background-image: none;
+
+
+}
 /*------BARRA DE NAVEGACIÓN------*/
 
 /*Si modifico este heigth debo modificar como se ve la barra el pantalla de celular*/
