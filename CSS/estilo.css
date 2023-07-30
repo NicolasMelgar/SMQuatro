@@ -18,16 +18,21 @@ html{
     font-family: 'Montserrat', sans-serif;
 }
 
-
+body{
+    background-image: linear-gradient(to bottom, rgba(62, 61, 61, 0.5), rgba(54, 57, 62, 0.5)), url(../IMG/fondo_inicio.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+}
+/*
 body{
     background-image: url(../IMG/fondo_inicio.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 30%;
     background-attachment: fixed;
-    /* background-position-x: -120px; */
     height: 90vh;
-}
+}*/
 
 .opaco{
     background-image: url(../IMG/fondo_inicio.jpg);
@@ -174,10 +179,10 @@ nav .icon .line{
     display: flex;
     font-size: 2.5rem;
     margin: auto;
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
     padding: 5px 15px;
     border-radius: 15px;
-    border: solid 3px var(--color-principal);
+    border: solid 1px var(--color-principal);
     transition: all 1s ease-in-out;
 }
 
@@ -187,7 +192,17 @@ nav .icon .line{
     background-color: var(--color-principal) ;
     border: solid 3px white;
 }
-@media screen and (max-width: 780px) {
+
+.blancos{
+    background-color: #ffffff;
+}
+
+.blancosP{
+    background-color: #ffffff;
+    color: black;
+}
+
+@media screen and (max-width: 980px) {
     nav .logo{
         float: none;
         width: auto;/*Misma solución que pantalla completa, queda fijo pero me gusta más que los movimientos que hace con % o px*/
@@ -373,12 +388,14 @@ footer{
 section {/*acá podría usar un calc en el margen sueprior y el alto...creo sería bueno*/
     margin-top: 10vh;/* por ejemplo margen superior = altura de nav +0*/
     height: 80vh;/*la altura de la section sería el 100% - (altura nav + altura footer)*/
+
 }
 
 
 /*------I  N  I  C  I  O----------*/
 
-section .contenedorImgTxt p, h1, h3{
+
+section .contenedorImgTxt h1, h3{
     color: white;
 }
 
@@ -393,6 +410,7 @@ section p{
 .cita {
     color: var(--color-secundario);
     font-size: 1.1rem;
+    flex-direction: column;
 }
 
 section h1{
@@ -407,7 +425,7 @@ section h3{
 
 .container section p{
     padding: 10px 0px;
-    flex-direction: column;
+   /* flex-direction: column;*/
 }
 
 .inicioTextos{

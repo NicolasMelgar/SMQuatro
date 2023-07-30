@@ -1,43 +1,157 @@
-/* COn esto logro que queden todas juntas en responsive como si fueran un fondo del nav....interesante
-.flexbox1 {
-    display: flex;
-    flex-wrap: wrap;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,200;1,400;1,700&display=swap');
+
+:root{
+    --color-principal: rgb(0,61,80);
+    --color-principal-piker: #003d50;
+    --color-principal-B: #1e293b;
+    --color-secundario: #334155;
 }
 
-.flexbox1 img {
-    flex-direction: column;
-    width: 20%;
-    flex-flow: column wrap;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+/*Usted pidio Montserrat*/
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
 body{
-    display: flex;
-    justify-content: center;
+    background-image: linear-gradient(to bottom, rgba(62, 61, 61, 0.5), rgba(54, 57, 62, 0.5)), url(../IMG/fondo_inicio.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-attachment: fixed;
 }
-*/
 
-/*De este modo logro que se hagan responsive con ancho fijo*/
+h1{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 4.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
 
-.flexbox1 {
-    display: flex;
-    justify-content: center;
+h3{
+    color: white;
+    font-size: 3rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.portada{
+    text-align: center;
+    margin: 7rem 5rem;
+    margin-bottom: 5rem;
+}
+
+.sub__portada{
+    text-align: center;
+    margin: 4rem 1rem;
     
 }
-.flex1 {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.flexbox1 img {
-    display: flex;
-    width: 260px;
-    height: auto;
-    margin: 10px 10px;
-  
+
+.articulo__fondo__blanco{
+    background-color: white;
+    border-top-left-radius: 95px;
 }
 
-.helga{
-    -webkit-box-reflect: below 2px;
-    -webkit-linear-gradient: (color-stop(60%, transparent), from(transparent), to (white));
+.articulo__Uno{
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+.mencion__Uno{
+    display: flex;
+    flex-direction: row ;
+    box-sizing: border-box;
+    margin-bottom: 0rem;
+
+}
+
+.img__Uno{
+    background-image: url(../IMG/DSC00317.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    border-top-left-radius: 95px;
+    width: 40vw;
+    height: 60vh;
+}
+
+.img__Dos{
+    background-image: url(../IMG/DSC00212.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    top: 5rem;
+    width: 40vw;
+    height: 60vh;
+}
+
+.img__Tres{
+    background-image: url(../IMG/DSC00321.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    border-bottom-left-radius: 95px;
+    width: 40vw;
+    height: 60vh;
+}
+
+.texto__Uno{
+    background-color: white;
+    width: 60vw;
+    padding: 2.5rem 2.5rem;
+    text-align: center;
+}
+.texto__Dos{
+    background-color: white;
+    width: 60vw;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+}
+.texto__Uno__parr{
+    font-size: 1.8rem;
+}
+
+@media screen and (max-width: 780px) {
+
+    h1{ font-size: 3rem;}
     
+    h3{font-size: 2rem; }
+    
+    .btn{font-size: 1.8rem; }
+        
+    .texto__Uno__parr{
+        font-size: 1.4rem;
+    }
+
+    .img__Uno, .img__Dos, .img__Tres{
+        width: 50vw;
+        height: 50vh;
+    }
+
+    .texto__Dos, .texto__Uno{
+        width: 50w;
+        padding-top: 0.5rem;
+        margin-top: 0;
+    }
 }
 
+@media screen and (max-width: 600px) {
+    .mencion__Uno{
+        display: flex;
+        flex-direction: column ;
+    }
+    .texto__Dos, .texto__Uno{
+        width: 100w;}
+
+    .img__Uno, .img__Dos, .img__Tres{
+        width: 100vw;
+        height: 50vh;
+    }
+    .texto__Uno__parr{
+        width: 90vw;
+        font-size: 1.4rem;
+    }
+
+}
